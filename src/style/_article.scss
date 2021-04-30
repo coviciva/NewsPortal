@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.article__container {
+  display: grid;
+  grid-template-columns: repeat(3, 0.1fr);
+  border-top: 1px solid lightgrey;
+
+  .article__card {
+    height: 252px;
+    width: 321px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+
+    .article__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 50%;
+    }
+
+    h1 {
+      margin: 5px;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.11px;
+      line-height: 20px;
+    }
+
+    span {
+      margin: 10px;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+    }
+
+    img {
+      height: 50%;
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+}

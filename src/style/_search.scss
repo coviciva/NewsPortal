@@ -69,3 +69,59 @@
     }
   }
 }
+
+@media only screen and (max-width: 910px) {
+  .search__container {
+    flex-direction: column;
+  }
+
+  .search__title h1 {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .searchBtn {
+    display: none;
+  }
+
+  .search__container {
+    .search__items {
+      width: 600px;
+    }
+  }
+
+  .search__title {
+    display: flex;
+    justify-content: space-between;
+
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .search__container {
+    .search__items {
+      width: 500px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .search__container {
+    .search__items {
+      width: 400px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .search__container {
+    .search__items {
+      width: 330px;
+      margin: 0;
+    }
+  }
+}

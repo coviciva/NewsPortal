@@ -1,0 +1,35 @@
+.menu {
+  .menu1 {
+    height: 4px;
+    width: 24px;
+    border-radius: 1px;
+    background-color: #1d1d1b;
+    margin: 3px;
+  }
+
+  .menu2 {
+    height: 4px;
+    width: 24px;
+    border-radius: 1px;
+    background-color: #1d1d1b;
+    margin: 3px;
+  }
+  .menu3 {
+    height: 4px;
+    width: 24px;
+    border-radius: 1px;
+    background-color: #1d1d1b;
+    margin: 3px;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .menu__title {
+  }
+}

@@ -2,7 +2,7 @@
 
 .article__container {
   display: grid;
-  grid-template-columns: repeat(3, 0.1fr);
+  //grid-template-columns: repeat(3, 0.1fr);
   //border-top: 1px solid lightgrey;
   grid-template-areas: "a b c";
 
@@ -55,5 +55,23 @@
 
   span {
     margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .article__container {
+    //grid-template-columns: repeat(2, 0.1fr);
+    grid-template-areas: none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .time {
+    display: none;
+  }
+
+  .article__container {
+    display: flex;
+    flex-direction: column;
   }
 }

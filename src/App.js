@@ -40,9 +40,16 @@ function App() {
           <div className="search__container">
             <div className="search__title">
               <h1>News</h1>
+              <span className="menu">
+                <div className="menu1"></div>
+                <div className="menu2"></div>
+                <div className="menu3"></div>
+              </span>
             </div>
+
             <div className="search__items">
               <img src={SearchIcon} alt="search_icon" />
+
               <input
                 type="text"
                 placeholder="Search news"
@@ -54,20 +61,26 @@ function App() {
                   } */
                 }}
               />
-              <button /*onClick={handleClick}*/>SEARCH</button>
+
+              <button /*onClick={handleClick}*/ className="searchBtn">
+                SEARCH
+              </button>
             </div>
+          </div>
+          <div className="buttons">
+            <button className="featuredBtn">Featured</button>
+            <button className="latestBtn">Latest</button>
           </div>
           <div className="nav">
             <Navigation />
             <div className="article__wrapper">
-              <span>News</span>
+              <span className="time">News</span>
               <div className="article__container">
                 <div className="latest__news">
+                  <div>Iva</div>
                   {data.map((article) => {
                     return <LatestNews article={article} key={article.title} />;
                   })}
-
-                  <div className="all__news">Iva</div>
                 </div>
 
                 {data

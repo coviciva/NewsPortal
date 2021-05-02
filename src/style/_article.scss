@@ -3,7 +3,8 @@
 .article__container {
   display: grid;
   grid-template-columns: repeat(3, 0.1fr);
-  border-top: 1px solid lightgrey;
+  //border-top: 1px solid lightgrey;
+  grid-template-areas: "a b c";
 
   .article__card {
     height: 252px;
@@ -30,8 +31,9 @@
 
     span {
       margin: 10px;
-      font-family: "Inter", sans-serif;
+      font-family: "Inter";
       font-size: 12px;
+      color: #1d1d1b;
     }
 
     img {
@@ -40,5 +42,18 @@
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
     }
+  }
+}
+
+.article__wrapper {
+  color: #1d1d1b;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  line-height: 24px;
+
+  span {
+    margin-left: 10px;
   }
 }

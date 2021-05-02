@@ -3,15 +3,18 @@ import Article from "./components/Article";
 import axios from "axios";
 import Header from "./components/Header";
 import SearchIcon from "./icons/search.svg";
+import Navigation from "./components/Navigation";
+import LatestNews from "./components/LatestNews";
+//import LatestIcon from "./icons/latest.svg";
 
 function App() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const [clicked, setClicked] = useState(false);
+  //const [clicked, setClicked] = useState(false);
 
-  const handleClick = () => {
+  /*   const handleClick = () => {
     setClicked(!clicked);
-  };
+  }; */
 
   useEffect(() => {
     axios
@@ -33,47 +36,64 @@ function App() {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <div className="search__container">
-          <div className="search__title">
-            <h1>News</h1>
-          </div>
-          <div className="search__items">
-            <img src={SearchIcon} alt="search_icon" />
-            <input
-              type="text"
-              placeholder="Search news"
-              onChange={(e) => {
-                setSearch(e.target.value);
+        <div>
+          <div className="search__container">
+            <div className="search__title">
+              <h1>News</h1>
+            </div>
+            <div className="search__items">
+              <img src={SearchIcon} alt="search_icon" />
+              <input
+                type="text"
+                placeholder="Search news"
+                onChange={(e) => {
+                  setSearch(e.target.value);
 
-                if (!search) {
-                  setClicked(false);
-                }
-              }}
-            />
-            <button onClick={handleClick}>SEARCH</button>
+                  /*     if (!search) {
+                    setClicked(false);
+                  } */
+                }}
+              />
+              <button /*onClick={handleClick}*/>SEARCH</button>
+            </div>
           </div>
-        </div>
+          <div className="nav">
+            <Navigation />
+            <div className="article__wrapper">
+              <span>News</span>
+              <div className="article__container">
+                <div className="latest__news">
+                  {data.map((article) => {
+                    return <LatestNews article={article} key={article.title} />;
+                  })}
 
-        <div className="article__container">
-          {data
-            .filter((article) => {
-              if (search === "" && !clicked) {
-                return article;
-              } else if (
-                article.source.name
-                  .toLowerCase()
-                  .includes(search.toLowerCase()) &&
-                clicked
-              ) {
-                return article;
-              } else if (!clicked) {
-                return article;
-              }
-              return null;
-            })
-            .map((article) => {
-              return <Article article={article} key={article.title} />;
-            })}
+                  <div className="all__news">Iva</div>
+                </div>
+
+                {data
+                  .filter((article) => {
+                    if (search === "" /*&& !clicked*/) {
+                      return article;
+                    } else if (
+                      article.source.name
+                        .toLowerCase()
+                        .includes(
+                          search.toLowerCase()
+                        ) /* &&
+                      clicked*/
+                    ) {
+                      return article;
+                    } /* else if (!clicked) {
+                      return article;
+                    } */
+                    return null;
+                  })
+                  .map((article) => {
+                    return <Article article={article} key={article.title} />;
+                  })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

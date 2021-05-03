@@ -86,4 +86,21 @@
       display: none;
     }
   }
+  .mobile__nav {
+    display: grid;
+
+    .navigation {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      .icon1 {
+        height: 95px;
+        width: 95px;
+      }
+      .icon {
+        height: 95px;
+        width: 95px;
+      }
+    }
+  }
 }

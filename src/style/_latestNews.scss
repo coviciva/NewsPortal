@@ -9,6 +9,31 @@
   box-shadow: 0 1px 2px -1px #c8cad1;
   margin-left: 10px;
   margin-top: 7px;
+  position: relative;
+
+  .latest__icon {
+    padding: 18px 15px 0 15px;
+    font-size: 16px;
+  }
+
+  .see__all {
+    position: sticky;
+    bottom: 0;
+    height: 51px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #1e71bb;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    line-height: 20px;
+    padding: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   &::-webkit-scrollbar {
     height: 68px;
@@ -28,10 +53,6 @@
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-
-  .all__news {
-    position: fixed;
-  }
 }
 
 .latest {
@@ -48,6 +69,10 @@
   flex-direction: column;
   border-bottom: 1px solid rgb(230, 230, 230);
 
+  .time {
+    margin: 0;
+  }
+
   span {
     height: 16px;
     width: 134px;
@@ -57,5 +82,15 @@
     font-weight: bold;
     letter-spacing: -0.02px;
     line-height: 16px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .display {
+    display: none;
+  }
+
+  .latest__news {
+    width: 331px;
   }
 }

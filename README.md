@@ -6,14 +6,12 @@
 <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
   <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
   <img alt="SASS" src="https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"/>
-  <img alt="Heroku" src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
 </div>
 
 <br />
 
 News Portal is web application for reading breaking news stories as they happen around the world.
 
-## Heroku
 
 ## Features
 
@@ -40,10 +38,10 @@ Clone this repository
 git clone https://github.com/coviciva/NewsPortal.git
 ```
 
-Position in the current working directory
+Position in the current working directory, e.g.
 
 ```
-ex. cd news_portal
+cd news_portal
 ```
 
 Installing dependencies

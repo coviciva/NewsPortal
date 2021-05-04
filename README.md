@@ -38,10 +38,10 @@ Clone this repository
 git clone https://github.com/coviciva/NewsPortal.git
 ```
 
-Position in the current working directory, e.g.
+Position in the current working directory
 
 ```
-cd news_portal
+cd NewsPortal
 ```
 
 Installing dependencies

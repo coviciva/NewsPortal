@@ -1,3 +1,17 @@
+@import "./variables";
+
+@mixin latest($w, $h, $c, $fSize, $fWeight, $lSpacing, $p) {
+  width: $w;
+  height: $h;
+  color: $c;
+  font-family: $mainFont;
+  font-size: $fSize;
+  font-weight: $fWeight;
+  letter-spacing: $lSpacing;
+  line-height: 20px;
+  padding: $p;
+}
+
 .latest__news {
   grid-area: c;
   grid-row: 1/3;
@@ -5,7 +19,7 @@
   height: 529px;
   width: 321px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: $white;
   box-shadow: 0 1px 2px -1px #c8cad1;
   margin-left: 10px;
   margin-top: 7px;
@@ -14,21 +28,16 @@
   .latest__icon {
     padding: 18px 15px 0 15px;
     font-size: 16px;
+    position: sticky;
+    top: 0;
+    background-color: $white;
   }
 
   .see__all {
+    @include latest(100%, 51px, #1e71bb, 14px, 500, -0.1px, 15px);
     position: sticky;
     bottom: 0;
-    height: 51px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #1e71bb;
-    font-family: "Inter";
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.1px;
-    line-height: 20px;
-    padding: 15px;
+    background-color: $white;
 
     &:hover {
       cursor: pointer;
@@ -56,15 +65,7 @@
 }
 
 .latest {
-  height: 120px;
-  width: 300px;
-  color: #000000;
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.11px;
-  line-height: 20px;
-  padding: 10px;
+  @include latest(300px, 120px, #000000, 16px, 600, -0.11px, 10px);
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgb(230, 230, 230);
@@ -74,13 +75,7 @@
   }
 
   span {
-    height: 16px;
-    width: 134px;
-    color: #1e71bb;
-    font-family: "Inter";
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: -0.02px;
+    @include latest(134px, 16px, #1e71bb, 10px, bold, -0.02px, 0);
     line-height: 16px;
   }
 }

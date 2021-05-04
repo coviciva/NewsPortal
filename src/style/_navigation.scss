@@ -1,3 +1,28 @@
+@import "./variables";
+
+@mixin icon {
+  width: 63px;
+  height: 63px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin name($c) {
+  width: 55px;
+  height: 14px;
+  color: $c;
+  font-family: $mainFont;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  line-height: 14px;
+  text-align: center;
+  padding-top: 3px;
+}
+
 .nav {
   display: flex;
   border-top: 1px solid rgb(230, 230, 230);
@@ -11,59 +36,29 @@
   margin-top: 10px;
 
   .icon1 {
-    height: 63px;
-    width: 63px;
-    border-radius: 5px;
-    background-color: #ffffff;
+    @include icon;
+    background-color: $white;
     box-shadow: 0 1px 2px -1px #c8cad1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     &:hover {
       cursor: pointer;
     }
 
     span {
-      height: 14px;
-      width: 29px;
-      color: #bb1e1e;
-      font-family: "Inter";
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1px;
-      line-height: 14px;
-      text-align: center;
-      padding-top: 3px;
+      @include name($redColor);
     }
   }
 
   .icon {
-    height: 63px;
-    width: 63px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include icon;
 
     &:hover {
       cursor: pointer;
     }
 
     span {
-      height: 14px;
-      width: 39px;
+      @include name(#1d1d1b);
       opacity: 0.5;
-      color: #1d1d1b;
-      font-family: "Inter";
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1px;
-      line-height: 14px;
-      text-align: center;
-      padding-top: 3px;
     }
   }
   img {

@@ -6,20 +6,14 @@ import SearchIcon from "./icons/search.svg";
 import Navigation from "./components/Navigation";
 import LatestNews from "./components/LatestNews";
 import LatestIcon from "./icons/latest.svg";
-//import DownIcon from "./icons/down.svg";
 
 function App() {
   const [data, setData] = useState([]);
   const [latest, setLatest] = useState([]);
   const [search, setSearch] = useState("");
-  //const [clicked, setClicked] = useState(false);
   const [clickedFeatured, setClickedFeatured] = useState(true);
   const [clickedLatest, setClickedLatest] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  /*   const handleClick = () => {
-    setClicked(!clicked);
-  }; */
-
   const [pageSize, setPageSize] = useState(10);
 
   const handleFeatured = () => {
@@ -52,7 +46,6 @@ function App() {
         "https://newsapi.org/v2/top-headlines?country=us&apiKey=1313d48eb2f349d3a0f8221492de5093"
       )
       .then((res) => {
-        console.log(res.data.articles);
         setData(res.data.articles);
       })
       .catch((error) => {
@@ -66,7 +59,6 @@ function App() {
         `https://newsapi.org/v2/top-headlines?country=us&pageSize=${pageSize}&apiKey=1313d48eb2f349d3a0f8221492de5093`
       )
       .then((res) => {
-        console.log(res.data.articles);
         setLatest(res.data.articles);
       })
       .catch((error) => {
@@ -74,13 +66,11 @@ function App() {
       });
   }, [pageSize]);
 
-  console.log(data);
-
   return (
     <div className="wrapper">
       <Header />
       <div
-        /*className="content"*/ className={
+        className={
           showMenu ? ["content", "content__mobile"].join(" ") : "content"
         }
       >
@@ -135,16 +125,10 @@ function App() {
                 placeholder="Search news"
                 onChange={(e) => {
                   setSearch(e.target.value);
-
-                  /*     if (!search) {
-                    setClicked(false);
-                  } */
                 }}
               />
 
-              <button /*onClick={handleClick}*/ className="searchBtn">
-                SEARCH
-              </button>
+              <button className="searchBtn">SEARCH</button>
             </div>
           </div>
           <div className="buttons" style={showMenu ? { display: "none" } : {}}>
@@ -183,7 +167,7 @@ function App() {
             <div className="article__wrapper">
               <span className="article__title">News</span>
               <div
-                /*className="article__container"*/ className={
+                className={
                   showMenu
                     ? ["article__container", "display"].join(" ")
                     : "article__container"
@@ -194,9 +178,7 @@ function App() {
                     clickedFeatured
                       ? ["latest__news", "display"].join(" ")
                       : "latest__news"
-                  } /*    style={
-                    clickedFeatured ? { display: "none" } : { display: "" }
-                  } */
+                  }
                   onScroll={handleScroll}
                 >
                   <div className="latest__icon">
@@ -204,36 +186,23 @@ function App() {
                     <span>Latest news</span>
                   </div>
 
-                  {
-                    latest.map((article) => {
-                      return (
-                        <LatestNews article={article} key={article.title} />
-                      );
-                    })
-                    /*.sort((a, b) => (new Date(a) < new Date(b) ? -1 : 1))*/
-                  }
-                  <div className="see__all">
-                    See all news &gt;
-                    {/* <img src={DownIcon} alt="down_icon" /> */}
-                  </div>
+                  {latest.map((article) => {
+                    return <LatestNews article={article} key={article.title} />;
+                  })}
+                  <div className="see__all">See all news &gt;</div>
                 </div>
 
                 {data
                   .filter((article) => {
-                    if (search === "" /*&& !clicked*/) {
+                    if (search === "") {
                       return article;
                     } else if (
                       article.source.name
                         .toLowerCase()
-                        .includes(
-                          search.toLowerCase()
-                        ) /* &&
-                      clicked*/
+                        .includes(search.toLowerCase())
                     ) {
                       return article;
-                    } /* else if (!clicked) {
-                      return article;
-                    } */
+                    }
                     return null;
                   })
                   .map((article) => {

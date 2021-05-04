@@ -5,7 +5,7 @@ const Article = ({ article, clickedLatest }) => {
     <div
       className={
         clickedLatest ? ["article__card", "display"].join(" ") : "article__card"
-      } /*className="article__card"*/
+      }
     >
       {article.urlToImage ? (
         <img src={article.urlToImage} alt="article_image" />

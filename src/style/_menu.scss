@@ -1,25 +1,21 @@
+@mixin menu {
+  height: 4px;
+  width: 24px;
+  border-radius: 1px;
+  background-color: #1d1d1b;
+  margin: 3px;
+}
+
 .menu {
   .menu1 {
-    height: 4px;
-    width: 24px;
-    border-radius: 1px;
-    background-color: #1d1d1b;
-    margin: 3px;
+    @include menu;
   }
 
   .menu2 {
-    height: 4px;
-    width: 24px;
-    border-radius: 1px;
-    background-color: #1d1d1b;
-    margin: 3px;
+    @include menu;
   }
   .menu3 {
-    height: 4px;
-    width: 24px;
-    border-radius: 1px;
-    background-color: #1d1d1b;
-    margin: 3px;
+    @include menu;
   }
 }
 
@@ -28,9 +24,3 @@
     display: none;
   }
 }
-/* 
-@media only screen and (max-width: 760px) {
-  .menu__title {
-  }
-}
- */

@@ -1,26 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap");
 
+@mixin search($h, $w, $c) {
+  height: $h;
+  width: $w;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: $c;
+}
+
 .search__container {
   margin: 33px 0;
   display: flex;
   width: 100%;
   align-items: center;
-  //justify-content: center;
 
   .search__title h1 {
-    font-family: "Inter";
+    font-family: $mainFont;
   }
 
   .search__title h1:before {
     content: "My";
-    color: #bb1e1e;
+    color: $redColor;
   }
 
   .search__items {
     height: 50px;
     width: 725px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: $white;
     box-shadow: 0 1px 2px -1px #c8cad1;
     display: flex;
     align-items: center;
@@ -39,28 +47,18 @@
       }
 
       &::placeholder {
-        height: 20px;
-        width: 92px;
+        @include search(20px, 92px, #1d1d1b);
         opacity: 0.4;
-        color: #1d1d1b;
-        font-family: "Inter";
-        font-size: 15px;
-        letter-spacing: 0;
-        line-height: 20px;
+        font-family: $mainFont;
       }
     }
 
     button {
-      height: 40px;
-      width: 95px;
+      @include search(40px, 95px, $white);
       border-radius: 6px;
-      background-color: #bb1e1e;
-      font-size: 15px;
+      background-color: $redColor;
       font-weight: bold;
-      letter-spacing: 0;
-      line-height: 20px;
       text-align: center;
-      color: white;
       border: none;
 
       &:hover {
@@ -94,7 +92,6 @@
   .search__title {
     display: flex;
     justify-content: space-between;
-
     width: 90%;
   }
 }

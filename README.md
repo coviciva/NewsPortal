@@ -10,7 +10,7 @@
 
 <br />
 
-News Portal is web application for reading breaking news stories as they happen around the world.
+News Portal is a web application for reading breaking news stories as they happen around the world.
 
 ## Application design
 

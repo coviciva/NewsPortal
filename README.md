@@ -11,7 +11,7 @@
 
 <br />
 
-Web application for reading breaking news stories as they happen around the world.
+News Portal is web application for reading breaking news stories as they happen around the world.
 
 ## Heroku
 

@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=1313d48eb2f349d3a0f8221492de5093"
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=f749885cd43f4b47953c77a6755c4725"
       )
       .then((res) => {
         setData(res.data.articles);

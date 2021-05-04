@@ -87,6 +87,7 @@
     .navigation {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      padding-left: 20px;
 
       .icon1 {
         height: 95px;

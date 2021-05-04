@@ -1,6 +1,6 @@
 # News Portal 
 
-> Frontend task
+> Frontend Developer task
 
 <div style="float: right">
 <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
@@ -11,6 +11,16 @@
 <br />
 
 News Portal is web application for reading breaking news stories as they happen around the world.
+
+## Application design
+
+
+<div><img src="https://user-images.githubusercontent.com/48959368/117065031-3afe3480-ad27-11eb-97a5-95c415406f6d.png" width="800"/></div>
+<p style="margin-right: 5px;">
+  <img src="https://user-images.githubusercontent.com/48959368/117065016-36d21700-ad27-11eb-9c9a-ffe0696fd5c9.png" width="250"/>
+  <img src="https://user-images.githubusercontent.com/48959368/117065022-389bda80-ad27-11eb-9db0-044989e1a3e2.png" width="250"/>
+  <img src="https://user-images.githubusercontent.com/48959368/117065024-389bda80-ad27-11eb-98c1-7da323819864.png" width="250"/>
+</p>
 
 
 ## Features
@@ -64,6 +74,7 @@ I used InVision desktop and mobile prototype for developing this web application
 I used grid for displaying elements beacuse it is easiest to arrange elements using it. Also, it is more elegant solution for setting up responsiveness.
 Also, I added grey image when article does not have url to image because it is prettier to see it rather then seeing just title. It is better for overall page impression.
 When article does not have an author, I adjusted author's name to author unknown.
+
 
 
 

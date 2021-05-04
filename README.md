@@ -60,10 +60,10 @@ Open http://localhost:3000 to view it in the browser.
 
 ## Design decisions
 
-I used InVision desktop and mobile prototype for developing web application.
+I used InVision desktop and mobile prototype for developing this web application.
 I used grid for displaying elements beacuse it is easiest to arrange elements using it. Also, it is more elegant solution for setting up responsiveness.
-I displayed grey image when article does not have url to image because it is prettier to see it rather then seeing just title. It is better for overall page impression.
-When article does not have author, I adjusted author's name to author unknown.
+Also, I added grey image when article does not have url to image because it is prettier to see it rather then seeing just title. It is better for overall page impression.
+When article does not have an author, I adjusted author's name to author unknown.
 
 
 
